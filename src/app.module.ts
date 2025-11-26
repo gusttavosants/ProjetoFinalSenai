@@ -4,6 +4,7 @@ import { AppService } from './app.service';
 import { CourseModule } from './course/course.module';
 import { EnrollmentModule } from './enrollment/enrollment.module';
 import { CollaboratorModule } from './collaborator/collaborator.module';
+import { AuthModule } from './auth/auth.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
 
 @Module({
@@ -14,11 +15,11 @@ import { TypeOrmModule } from '@nestjs/typeorm';
       port: 3306,
       username: 'root',
       password: '',
-      database: 'ProjetoFinal',
+      database: 'projetofinal',
       autoLoadEntities: true,
-      synchronize: false, 
+      synchronize: true, 
       }),
-    CourseModule, EnrollmentModule, CollaboratorModule],
+    CourseModule, EnrollmentModule, CollaboratorModule, AuthModule],
   controllers: [AppController],
   providers: [AppService],
 })

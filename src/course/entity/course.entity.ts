@@ -9,5 +9,12 @@ import { Column, Entity, PrimaryGeneratedColumn } from "typeorm";
         @Column()
         nome:string
 
-    
+        @Column()
+        descricao:String
+
+        @Column()
+        preco:number
+
+        @Column({default : 'ativo'})
+        status:string
     }

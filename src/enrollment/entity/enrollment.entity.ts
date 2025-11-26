@@ -9,5 +9,20 @@ import { Column, Entity, PrimaryGeneratedColumn } from "typeorm";
         @Column()
         nome:string
 
-    
+        @Column()
+        email:string
+
+        @Column()
+        cpf:number
+
+        @Column()
+        telefone:number
+
+        @Column()
+        aniversario:Date
+
+        //IdCourse
+
+        @Column()
+        dataCriacao:Date
     }
